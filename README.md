@@ -1,10 +1,9 @@
 RandomPictureAPI
 =========
 
-[![Issues](https://img.shields.io/github/issues/wh-iterabb-it/meowfacts.svg)](https://github.com/wh-iterabb-it/meowfacts/issues)
-[![License](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/wh-iterabb-it/meowfacts/blob/main/LICENSE)
-![Known Vulnerabilities](https://snyk.io/test/github/wh-iterabb-it/meowfacts/badge.svg) 
-[![codecov](https://codecov.io/gh/wh-iterabb-it/meowfacts/branch/main/graph/badge.svg)](https://codecov.io/gh/wh-iterabb-it/meowfacts)
+[![Issues](https://img.shields.io/github/issues/wh-iterabb-it/meowfacts.svg)](https://github.com/Larssies/RandomPictureAPI/issues)
+[![License](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/Larssies/RandomPictureAPI/blob/main/LICENSE)
+[![Larssies](https://img.shields.io/badge/Author-Larssies-blue)](https://larssies.com/)
 
 
 ## Description:
