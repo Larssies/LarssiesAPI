@@ -30,6 +30,36 @@ app.use((req, res, next) => {
 });
 
 app.get('/random', (req, res) => {
+    const count = parseInt(req.query.count);
+
+    if (count && count > 1) {
+        handleMultipleRandomPictures(req, res, count);
+    } else {
+        fs.readdir(picturesFolder, (err, files) => {
+            if (err) {
+                console.error('Error reading pictures folder:', err);
+                return res.status(500).json({
+                    error: 'Internal Server Error',
+                    success: false 
+                });
+            }
+
+            const randomIndex = Math.floor(Math.random() * files.length);
+            const randomImage = path.join('/cdn', files[randomIndex]).replace(/\\/g, '/');
+            const fullUrl = `https://${req.get('host')}${randomImage}`;
+
+            console.log(`[${currentTimeString}] Request received for ${req.url}`);
+
+            res.json({
+                url: fullUrl, 
+                success: true
+            });
+        });
+    }
+});
+
+
+function handleMultipleRandomPictures(req, res, count) {
     fs.readdir(picturesFolder, (err, files) => {
         if (err) {
             console.error('Error reading pictures folder:', err);
@@ -39,18 +69,23 @@ app.get('/random', (req, res) => {
             });
         }
 
-        const randomIndex = Math.floor(Math.random() * files.length);
-        const randomImage = path.join('/cdn', files[randomIndex]).replace(/\\/g, '/');
-        const fullUrl = `https://${req.get('host')}${randomImage}`;
+        const selectedImages = [];
+
+        for (let i = 0; i < count; i++) {
+            const randomIndex = Math.floor(Math.random() * files.length);
+            const randomImage = path.join('/cdn', files[randomIndex]).replace(/\\/g, '/');
+            const fullUrl = `https://${req.get('host')}${randomImage}`;
+            selectedImages.push({
+                url: fullUrl,
+                success: true
+            });
+        }
 
         console.log(`[${currentTimeString}] Request received for ${req.url}`);
 
-        res.json({
-            url: fullUrl, 
-            success: true
-        });
+        res.json(selectedImages);
     });
-});
+}
 
 app.use('/cdn', express.static('cdn'));
 

@@ -56,27 +56,86 @@ fetch('https://api.larssies.com/random')
 });
         </code>
       </pre>
+      <h3>Java Example</h3>
+      <pre>
+        <code>
+String url = "https://api.larssies.com/random";
+URL apiUrl = new URL(url);
+HttpURLConnection connection = (HttpURLConnection) apiUrl.openConnection();
+        
+BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+StringBuilder response = new StringBuilder();
+String line;
+        
+while ((line = reader.readLine()) != null) {
+    response.append(line);
+}
+        
+reader.close();
+connection.disconnect();
+        
+System.out.println(response.toString());
+        </code>
+      </pre>
     </div>
 
-    <div id="apiFeatures">
+    <!-- <div id="api-info">
       <h2>API Features</h2>
 
       <h3>Description</h3>
       <p>A simple API that returns a random picture on a GET request.</p>
-
+  
       <h3>Example Usage</h3>
       <p>GET Request: <code>curl https://api.larssies.com/random</code></p>
       <p>Response:</p>
       <pre>
-        <code>
+          <code>
+  {
+   "url": "https://api.larssies.com/cdn/RANDOM_PICTURE/",
+   "success": "true"
+  }
+          </code>
+      </pre> -->
+      <!-- Add more examples as needed -->
+    </div>
+    <div class="api-info">
+      <div class="api-info">
+        <h3>Get A Random Picture</h3>
+        <p>Get a random picture on a GET request.</p>
+        <p>Example: <code>curl https://api.larssies.com/random</code></p>
+        <p>Response:</p>
+        <pre>
+            <code>
 {
  "url": "https://api.larssies.com/cdn/RANDOM_PICTURE/",
  "success": "true"
 }
-        </code>
-      </pre>
-      <!-- Add more examples as needed -->
+            </code>
+        </pre>
     </div>
+      <h3>Get Multiple Random Pictures</h3>
+      <p>Retrieve a specified number of random pictures by providing a count parameter in the GET request.</p>
+      <p>Example: <code>curl https://api.larssies.com/random?count=3</code></p>
+      <p>Response:</p>
+      <pre>
+          <code>
+[
+{
+ "url": "https://api.larssies.com/cdn/RANDOM_PICTURE_1/",
+ "success": "true"
+},
+{
+ "url": "https://api.larssies.com/cdn/RANDOM_PICTURE_2/",
+ "success": "true"
+},
+{
+ "url": "https://api.larssies.com/cdn/RANDOM_PICTURE_3/",
+ "success": "true"
+}
+]
+          </code>
+      </pre>
+  </div>
   </main>
 
   <footer>
