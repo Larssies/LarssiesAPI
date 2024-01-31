@@ -29,7 +29,7 @@ Response
 ### Documentation
 
 <div align="center">
-    <h1><a> href="https://api.larssies.site/" type="_blank"</a>Official Website</h1>
+    <h1><a href="https://api.larssies.site/" type="_blank">Official Website</a></h1>
 </div>
 
 
