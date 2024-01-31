@@ -13,14 +13,14 @@ This API provides random pictures for your applications or projects. It's easy t
 ### Example Usage
 
 ``` 
-curl https://api.larssies.site/random
+curl https://api.larssies.com/random
 ```
 
 Response
 
 ```json
 {
-  "url": "https://api.larssies.site/cdn/RANDOM_PICTURE/",
+  "url": "https://api.larssies.com/cdn/RANDOM_PICTURE/",
   "success": true
 }
 ```
@@ -29,7 +29,7 @@ Response
 ### Documentation
 
 <div align="">
-    <h3>- <a href="https://api.larssies.site/" type="_blank">Official Website</a></h3>
+    <h3>- <a href="https://api.larssies.com/" type="_blank">Official Website</a></h3>
 </div>
 
 
