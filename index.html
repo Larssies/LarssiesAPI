@@ -17,7 +17,7 @@
     <div class="api-info">
       <h2>API Information</h2>
       <p>This API provides random pictures for your applications or projects. It's easy to integrate and adds a touch of creativity to your content.</p>
-      <!-- <p>Documentation and usage examples can be found at <a href="https://larssies.com/randompicturesapi" target="_blank">larssies.com/randompicturesapi</a>.</p> -->
+      <p>Documentation can be found at our <a href="https://github.com/Larssies/RandomPictureAPI" target="_blank">GitHub</a>.</p>
     </div>
 
     <div id="randomPicture">
@@ -35,7 +35,7 @@
         <code>
 import requests
 
-url = 'http://api.larssies.site/random'
+url = 'https://api.larssies.site/random'
 response = requests.get(url)
 data = response.json()
 
@@ -46,7 +46,7 @@ print(data)
       <h3>JavaScript Example</h3>
       <pre>
         <code>
-fetch('http://api.larssies.site/random')
+fetch('https://api.larssies.site/random')
 .then(response => response.json())
 .then(data => {
     console.log(data);
@@ -65,12 +65,12 @@ fetch('http://api.larssies.site/random')
       <p>A simple API that returns a random picture on a GET request.</p>
 
       <h3>Example Usage</h3>
-      <p>GET Request: <code>curl http://api.larssies.site/random</code></p>
+      <p>GET Request: <code>curl https://api.larssies.site/random</code></p>
       <p>Response:</p>
       <pre>
         <code>
 {
- "url": "http://api.larssies.site/cdn/RANDOM_PICTURE/",
+ "url": "https://api.larssies.site/cdn/RANDOM_PICTURE/",
  "success": "true"
 }
         </code>
