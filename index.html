@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>RandomPicturesAPI by Larssies</title>
+</head>
+<body>
+  <header>
+    <h1 style="color: white;">RandomPicturesAPI by Larssies</h1>
+  </header>
+
+  <main>
+    <p>Welcome to RandomPicturesAPI, an awesome service created by Larssies!</p>
+    
+    <div class="api-info">
+      <h2>API Information</h2>
+      <p>This API provides random pictures for your applications or projects. It's easy to integrate and adds a touch of creativity to your content.</p>
+      <!-- <p>Documentation and usage examples can be found at <a href="https://larssies.com/randompicturesapi" target="_blank">larssies.com/randompicturesapi</a>.</p> -->
+    </div>
+
+    <div id="randomPicture">
+      <h2>Random Picture</h2>
+      <p>Try it out yourself!</p>
+      <button onclick="getRandomPicture()">Get Random Picture</button>
+      <div id="pictureContainer"></div>
+      <div class="loader" id="loader" style="display: none;"></div>
+    </div>
+
+    <div id="apiUsage">
+      <h2>API Usage Examples</h2>
+      <h3>Python Example</h3>
+      <pre>
+        <code>
+import requests
+
+url = 'http://api.larssies.site/random'
+response = requests.get(url)
+data = response.json()
+
+print(data)
+        </code>
+      </pre>
+
+      <h3>JavaScript Example</h3>
+      <pre>
+        <code>
+fetch('http://api.larssies.site/random')
+.then(response => response.json())
+.then(data => {
+    console.log(data);
+
+    // Get the image URL
+    const imageURL = data.url 
+});
+        </code>
+      </pre>
+    </div>
+
+    <div id="apiFeatures">
+      <h2>API Features</h2>
+
+      <h3>Description</h3>
+      <p>A simple API that returns a random picture on a GET request.</p>
+
+      <h3>Example Usage</h3>
+      <p>GET Request: <code>curl http://api.larssies.site/random</code></p>
+      <p>Response:</p>
+      <pre>
+        <code>
+{
+ "url": "http://api.larssies.site/cdn/RANDOM_PICTURE/",
+ "success": "true"
+}
+        </code>
+      </pre>
+      <!-- Add more examples as needed -->
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2024 RandomPicturesAPI by <a href="https://larssies.com" type="_blank">Larssies</a>. All rights reserved.
+  </footer>    
+  </body>
+  <script>
+    async function getRandomPicture() {
+      document.getElementById('loader').style.display = 'block';
+
+      try {
+        const response = await fetch('https://api.larssies.site/random');
+        const data = await response.json();
+
+        const pictureUrl = data.url;
+
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('pictureContainer').innerHTML = `<img src="${pictureUrl}" alt="Random Picture" style="max-width: 100%;">`;
+      } catch (error) {
+        console.error('Error fetching random picture:', error);
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('pictureContainer').innerHTML = '<p>Error fetching random picture. Please try again.</p>';
+      }
+    }
+  </script>
