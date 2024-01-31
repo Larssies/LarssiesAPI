@@ -20,7 +20,7 @@ Response
 
 ```json
 {
-  "url": "https://api.larssies.com/cdn/RANDOM_PICTURE/",
+  "url": "https://api.larssies.com/cdn/RANDOM_PICTURE",
   "success": true
 }
 ```
