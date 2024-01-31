@@ -20,9 +20,36 @@ Response
 
 ```json
 {
-  "url": "https://api.larssies.com/cdn/RANDOM_PICTURE/",
+  "url": "https://api.larssies.com/cdn/RANDOM_PICTURE",
   "success": true
 }
+```
+
+### Advanced Usage
+
+You can request more than one picture at a time by using the GET param `count`
+
+```bash
+curl https://api.larssies.com/random?count=3
+```
+
+Response
+
+```json
+[
+    {
+        "url": "https://api.larssies.com/cdn/RANDOM_IMAGE_1",
+        "success": true
+    },
+    {
+        "url": "https://api.larssies.com/cdn/RANDOM_IMAGE_2",
+        "success": true
+    },
+    {
+        "url": "https://api.larssies.com/cdn/RANDOM_IMAGE_3",
+        "success": true
+    }
+]
 ```
 
 
