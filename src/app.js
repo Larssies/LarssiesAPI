@@ -13,8 +13,8 @@ const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
 const currentTimeString = `${formattedHours}:${formattedMinutes}`;
 
 const options = {
-    key: fs.readFileSync('/etc/letsencrypt/live/api.larssies.site/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/api.larssies.site/fullchain.pem'),
+    key: fs.readFileSync('/etc/letsencrypt/live/api.larssies.com/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/api.larssies.com/fullchain.pem'),
 };
 
 const server = https.createServer(options, app);
@@ -55,7 +55,7 @@ app.get('/random', (req, res) => {
 app.use('/cdn', express.static('cdn'));
 
 server.listen(port, () => {
-    console.log(`Server is running at https://api.larssies.site/random`);
+    console.log(`Server is running at https://api.larssies.com/random`);
 });
 
 process.on('SIGTERM', () => {
