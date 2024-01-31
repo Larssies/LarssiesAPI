@@ -28,7 +28,7 @@ Response
 
 ### Documentation
 
-<div align="center">
+<div align="">
     <h1><a href="https://api.larssies.site/" type="_blank">Official Website</a></h1>
 </div>
 
