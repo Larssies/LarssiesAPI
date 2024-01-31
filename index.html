@@ -35,7 +35,7 @@
         <code>
 import requests
 
-url = 'https://api.larssies.site/random'
+url = 'https://api.larssies.com/random'
 response = requests.get(url)
 data = response.json()
 
@@ -46,7 +46,7 @@ print(data)
       <h3>JavaScript Example</h3>
       <pre>
         <code>
-fetch('https://api.larssies.site/random')
+fetch('https://api.larssies.com/random')
 .then(response => response.json())
 .then(data => {
     console.log(data);
@@ -65,12 +65,12 @@ fetch('https://api.larssies.site/random')
       <p>A simple API that returns a random picture on a GET request.</p>
 
       <h3>Example Usage</h3>
-      <p>GET Request: <code>curl https://api.larssies.site/random</code></p>
+      <p>GET Request: <code>curl https://api.larssies.com/random</code></p>
       <p>Response:</p>
       <pre>
         <code>
 {
- "url": "https://api.larssies.site/cdn/RANDOM_PICTURE/",
+ "url": "https://api.larssies.com/cdn/RANDOM_PICTURE/",
  "success": "true"
 }
         </code>
@@ -88,7 +88,7 @@ fetch('https://api.larssies.site/random')
       document.getElementById('loader').style.display = 'block';
 
       try {
-        const response = await fetch('https://api.larssies.site/random');
+        const response = await fetch('https://api.larssies.com/random');
         const data = await response.json();
 
         const pictureUrl = data.url;
