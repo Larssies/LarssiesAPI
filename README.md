@@ -74,6 +74,16 @@ Basic usage
 npm run start
 ```
 
+# Statistics
+## Languages
+| language | files | code | comment | blank | total |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| JSON | 2 | 705 | 0 | 2 | 707 |
+| HTML | 1 | 129 | 18 | 17 | 164 |
+| JavaScript | 2 | 124 | 0 | 30 | 154 |
+| CSS | 1 | 79 | 0 | 13 | 92 |
+| Markdown | 1 | 54 | 0 | 26 | 80 |
+
 </div>
 
 
