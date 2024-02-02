@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 style="color: white;">RandomPicturesAPI</h1>
+      </header>
+    
+      <nav style="display: flex; align-items: center; justify-content: center;">
+        <ul>
+          <li><a href="#information">API Information</a></li>
+          <li><a href="#examples">API Usage Examples</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#">Statistics</a></li>
+        </ul>
+      </nav>
+      <main>
+        <div style="width: 80%; margin: auto;">
+            <!-- Add a canvas element for the chart -->
+            <canvas id="apiCallsChart"></canvas>
+        </div>
+      </main>
+      <footer>
+        &copy; 2024 RandomPicturesAPI by <a href="https://larssies.com" type="_blank">Larssies</a>. All rights reserved.
+      </footer>   
+</body>
+<script>
+var apiCallsHistory = 20
+
+var ctx = document.getElementById('apiCallsChart').getContext('2d');
+
+var apiCallsChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        datasets: [{
+            label: 'API Calls',
+            data: apiCallsHistory,
+            fill: false,
+            borderColor: 'rgb(75, 192, 192)',
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            x: {
+                type: 'linear',
+                position: 'bottom'
+            },
+            y: {
+                type: 'linear',
+                position: 'left',
+                max: 100
+            }
+        }
+    }
+});
+</script>
+</html>

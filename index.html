@@ -9,17 +9,28 @@
 </head>
 <body>
   <header>
-    <h1 style="color: white;">RandomPicturesAPI by Larssies</h1>
+    <h1 style="color: white;">RandomPicturesAPI</h1>
   </header>
+
+  <nav style="display: flex; align-items: center; justify-content: center;">
+    <ul>
+      <li><a href="#information">API Information</a></li>
+      <li><a href="#examples">API Usage Examples</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="/stats">Statistics</a></li>
+    </ul>
+  </nav>
 
   <main>
     <p>Welcome to RandomPicturesAPI, an awesome service created by Larssies!</p>
     
-    <div class="api-info">
-      <h2>API Information</h2>
-      <p>This API provides random pictures for your applications or projects. It's easy to integrate and adds a touch of creativity to your content.</p>
-      <p>Documentation can be found at our <a href="https://github.com/Larssies/RandomPictureAPI" target="_blank">GitHub</a>.</p>
-    </div>
+    <section id="information">
+      <div class="api-info">
+        <h2>API Information</h2>
+        <p>This API provides random pictures for your applications or projects. It's easy to integrate and adds a touch of creativity to your content.</p>
+        <p>Documentation can be found at our <a href="https://github.com/Larssies/RandomPictureAPI" target="_blank">GitHub</a>.</p>
+      </div>
+    </section>
 
     <div id="randomPicture">
       <h2>Random Picture</h2>
@@ -29,56 +40,58 @@
       <div class="loader" id="loader" style="display: none;"></div>
     </div>
 
-    <div id="apiUsage">
-      <h2>API Usage Examples</h2>
-      <h3>Python Example</h3>
-      <pre>
-        <code>
-import requests
-
-url = 'https://api.larssies.com/random'
-response = requests.get(url)
-data = response.json()
-
-print(data)
-        </code>
-      </pre>
-
-      <h3>JavaScript Example</h3>
-      <pre>
-        <code>
-fetch('https://api.larssies.com/random')
-.then(response => response.json())
-.then(data => {
-    console.log(data);
-
-    // Get the image URL
-    const imageURL = data.url 
-});
-        </code>
-      </pre>
-      <h3>Java Example</h3>
-      <pre>
-        <code>
-String url = "https://api.larssies.com/random";
-URL apiUrl = new URL(url);
-HttpURLConnection connection = (HttpURLConnection) apiUrl.openConnection();
-        
-BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-StringBuilder response = new StringBuilder();
-String line;
-        
-while ((line = reader.readLine()) != null) {
-    response.append(line);
-}
-        
-reader.close();
-connection.disconnect();
-        
-System.out.println(response.toString());
-        </code>
-      </pre>
-    </div>
+    <section id="examples">
+      <div id="apiUsage">
+        <h2>API Usage Examples</h2>
+        <h3>Python Example</h3>
+        <pre>
+          <code>
+  import requests
+  
+  url = 'https://api.larssies.com/random'
+  response = requests.get(url)
+  data = response.json()
+  
+  print(data)
+          </code>
+        </pre>
+  
+        <h3>JavaScript Example</h3>
+        <pre>
+          <code>
+  fetch('https://api.larssies.com/random')
+  .then(response => response.json())
+  .then(data => {
+      console.log(data);
+  
+      // Get the image URL
+      const imageURL = data.url 
+  });
+          </code>
+        </pre>
+        <h3>Java Example</h3>
+        <pre>
+          <code>
+  String url = "https://api.larssies.com/random";
+  URL apiUrl = new URL(url);
+  HttpURLConnection connection = (HttpURLConnection) apiUrl.openConnection();
+          
+  BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+  StringBuilder response = new StringBuilder();
+  String line;
+          
+  while ((line = reader.readLine()) != null) {
+      response.append(line);
+  }
+          
+  reader.close();
+  connection.disconnect();
+          
+  System.out.println(response.toString());
+          </code>
+        </pre>
+      </div>
+    </section>
 
     <!-- <div id="api-info">
       <h2>API Features</h2>
@@ -99,46 +112,47 @@ System.out.println(response.toString());
       </pre> -->
       <!-- Add more examples as needed -->
     </div>
-    <div class="api-info">
+    <section id="features">
       <div class="api-info">
-        <h3>Get A Random Picture</h3>
-        <p>Get a random picture on a GET request.</p>
-        <p>Example: <code>curl https://api.larssies.com/random</code></p>
+        <div class="api-info">
+          <h3>Get A Random Picture</h3>
+          <p>Get a random picture on a GET request.</p>
+          <p>Example: <code>curl https://api.larssies.com/random</code></p>
+          <p>Response:</p>
+          <pre>
+              <code>
+  {
+   "url": "https://api.larssies.com/cdn/RANDOM_PICTURE/",
+   "success": "true"
+  }
+              </code>
+          </pre>
+      </div>
+        <h3>Get Multiple Random Pictures</h3>
+        <p>Retrieve a specified number of random pictures by providing a count parameter in the GET request.</p>
+        <p>Example: <code>curl https://api.larssies.com/random?count=3</code></p>
         <p>Response:</p>
         <pre>
             <code>
-{
- "url": "https://api.larssies.com/cdn/RANDOM_PICTURE/",
- "success": "true"
-}
+  [
+  {
+   "url": "https://api.larssies.com/cdn/RANDOM_PICTURE_1/",
+   "success": "true"
+  },
+  {
+   "url": "https://api.larssies.com/cdn/RANDOM_PICTURE_2/",
+   "success": "true"
+  },
+  {
+   "url": "https://api.larssies.com/cdn/RANDOM_PICTURE_3/",
+   "success": "true"
+  }
+  ]
             </code>
         </pre>
     </div>
-      <h3>Get Multiple Random Pictures</h3>
-      <p>Retrieve a specified number of random pictures by providing a count parameter in the GET request.</p>
-      <p>Example: <code>curl https://api.larssies.com/random?count=3</code></p>
-      <p>Response:</p>
-      <pre>
-          <code>
-[
-{
- "url": "https://api.larssies.com/cdn/RANDOM_PICTURE_1/",
- "success": "true"
-},
-{
- "url": "https://api.larssies.com/cdn/RANDOM_PICTURE_2/",
- "success": "true"
-},
-{
- "url": "https://api.larssies.com/cdn/RANDOM_PICTURE_3/",
- "success": "true"
-}
-]
-          </code>
-      </pre>
-  </div>
-  </main>
-
+    </main>
+    </section>
   <footer>
     &copy; 2024 RandomPicturesAPI by <a href="https://larssies.com" type="_blank">Larssies</a>. All rights reserved.
   </footer>    
