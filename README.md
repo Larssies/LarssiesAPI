@@ -1,4 +1,4 @@
-RandomPictureAPI
+LarssiesAPI
 =========
 
 [![Issues](https://img.shields.io/github/issues/wh-iterabb-it/meowfacts.svg)](https://github.com/Larssies/RandomPictureAPI/issues)
