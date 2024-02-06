@@ -1,14 +1,14 @@
 LarssiesAPI
 =========
 
-[![Issues](https://img.shields.io/github/issues/wh-iterabb-it/meowfacts.svg)](https://github.com/Larssies/RandomPictureAPI/issues)
+[![Issues](https://img.shields.io/github/issues/larssies/LarssiesAPI.svg)](https://github.com/Larssies/RandomPictureAPI/issues)
 [![License](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/Larssies/RandomPictureAPI/blob/main/LICENSE)
 [![Larssies](https://img.shields.io/badge/Author-Larssies-blue)](https://larssies.com/)
 
 
 ## Description:
 
-This API provides random pictures for your applications or projects. It's easy to integrate and adds a touch of creativity to your content.
+This is a general purpose API that has many features and many coming! :)
 
 ### Example Usage
 
