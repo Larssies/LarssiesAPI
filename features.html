@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="shortcut icon" href="assets/test-logo.png" type="image/x-icon">
-  <title>LarssiesAPI</title>
+  <title>LarssiesAPI - Features</title>
 </head>
 <body>
   <header>
@@ -16,94 +16,89 @@
     <ul>
       <li><a href="https://api.larssies.com/#information">API Information</a></li>
       <li><a href="https://api.larssies.com/#examples">API Usage Examples</a></li>
-      <li><a href="/features">Features</a></li>
+      <li><a href="#features">Features</a></li>
       <li><a href="/stats">Statistics</a></li>
     </ul>
   </nav>
 
   <main>
-    <p>Welcome to LarssiesAPI, an awesome service created by <a href="https://larssies.com" type="_blank">Larssies</a>!</p>
-    
-    <section id="information">
+    <h1>API Features</h1>
+    </section>
+    </div>
+    <section id="features">
       <div class="api-info">
-        <h2>API Information</h2>
-        <p>This is a general purpose API that has many features and many coming!</p>
-        <p>Documentation can be found at our <a href="https://github.com/Larssies/LarssiesAPI" target="_blank">GitHub</a>.</p>
-      </div>
-    </section>
-
-    <section id="examples">
-      <div id="apiUsage">
-        <h2>API Usage Examples</h2>
-        <h3>Python Example</h3>
-        <pre>
-          <code>
-  import requests
-  
-  url = 'https://api.larssies.com/random'
-  response = requests.get(url)
-  data = response.json()
-  
-  print(data)
-          </code>
-        </pre>
-  
-        <h3>JavaScript Example</h3> 
-        <pre>
-          <code>
-  fetch('https://api.larssies.com/random')
-  .then(response => response.json())
-  .then(data => {
-      console.log(data);
-  
-      // Get the image URL
-      const imageURL = data.url 
-  });
-          </code>
-        </pre>
-        <h3>Java Example</h3>
-        <pre>
-          <code>
-  String url = "https://api.larssies.com/random";
-  URL apiUrl = new URL(url);
-  HttpURLConnection connection = (HttpURLConnection) apiUrl.openConnection();
-          
-  BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-  StringBuilder response = new StringBuilder();
-  String line;
-          
-  while ((line = reader.readLine()) != null) {
-      response.append(line);
-  }
-          
-  reader.close();
-  connection.disconnect();
-          
-  System.out.println(response.toString());
-          </code>
-        </pre>
-      </div>
-    </section>
-
-    <!-- <div id="api-info">
-      <h2>API Features</h2>
-
-      <h3>Description</h3>
-      <p>A simple API that returns a random picture on a GET request.</p>
-  
-      <h3>Example Usage</h3>
-      <p>GET Request: <code>curl https://api.larssies.com/random</code></p>
-      <p>Response:</p>
-      <pre>
-          <code>
+        <div class="api-info">
+          <h3>Get A Random Picture</h3>
+          <p>Get a random picture on a GET request.</p>
+          <p>Example: <code>curl https://api.larssies.com/random</code></p>
+          <p>Response:</p>
+          <pre>
+              <code>
   {
    "url": "https://api.larssies.com/cdn/RANDOM_PICTURE/",
    "success": "true"
   }
-          </code>
-      </pre> -->
-      <!-- Add more examples as needed -->
+              </code>
+          </pre>
+      </div>
+        <h3>Get Multiple Random Pictures</h3>
+        <p>Retrieve a specified number of random pictures by providing a count parameter in the GET request.</p>
+        <p>Example: <code>curl https://api.larssies.com/random?count=3</code></p>
+        <p>Response:</p>
+        <pre>
+            <code>
+  [
+  {
+   "url": "https://api.larssies.com/cdn/RANDOM_PICTURE_1/",
+   "success": "true"
+  },
+  {
+   "url": "https://api.larssies.com/cdn/RANDOM_PICTURE_2/",
+   "success": "true"
+  },
+  {
+   "url": "https://api.larssies.com/cdn/RANDOM_PICTURE_3/",
+   "success": "true"
+  }
+  ]
+            </code>
+        </pre>
+        <div id="randomPicture">
+            <h4>Random Picture</h4>
+            <p>Try it out yourself!</p>
+            <button onclick="getRandomPicture()">Get Random Picture</button>
+            <div id="pictureContainer"></div>
+            <div class="loader" id="loader" style="display: none;"></div>
+          </div>
     </div>
+    <div class="api-info">
+      <div class="api-info">
+        <h3>Get The Weather Of A Specific City</h3>
+        <p>Get the weather of a city on a GET request.</p>
+        <p>Example: <code>curl https://api.larssies.com/weather?city=Amsterdam</code></p>
+        <p>Response:</p>
+        <pre>
+            <code>
+{
+  "temperature":"10.5 °C",
+  "description":"light rain",
+  "success":true
+}
+            </code>
+        </pre>
+
+        <h4>Try it out yourself!</h4>
+        <input type="text" placeholder="City Name" class="input">
+        <button onclick="getWeatherInCity()">Get Weather</button>
+        <div class="weather-results" style="display: none;">
+          <div class="widget">
+            <h2>Weather</h2>
+            <p id="temperature">Loading...</p>
+            <p id="description"></p>
+          </div>
+        </div>
+    </div>
+  </div>
     </main>
     </section>
   <footer>

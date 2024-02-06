@@ -1,0 +1,11 @@
+{
+    "version": "1.0",
+    "author": "Larssies",
+    "name": "LarssiesAPI",
+    "github": "https://github.com/Larssies/LarssiesAPI",
+    "domain": {
+        "https": false,
+        "name": "api.larssies.com",
+        "port": 8443    
+    }
+}
