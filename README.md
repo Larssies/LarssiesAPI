@@ -8,7 +8,7 @@ LarssiesAPI
 
 ## Description:
 
-This API provides random pictures for your applications or projects. It's easy to integrate and adds a touch of creativity to your content.
+This is a general purpose API that has many features and many coming! :)
 
 ### Example Usage
 
