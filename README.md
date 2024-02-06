@@ -2,7 +2,7 @@ LarssiesAPI
 =========
 
 [![Issues](https://img.shields.io/github/issues/larssies/LarssiesAPI.svg)](https://github.com/Larssies/RandomPictureAPI/issues)
-[![License](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/Larssies/RandomPictureAPI/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Larssies/RandomPictureAPI/blob/main/LICENSE)
 [![Larssies](https://img.shields.io/badge/Author-Larssies-blue)](https://larssies.com/)
 
 
