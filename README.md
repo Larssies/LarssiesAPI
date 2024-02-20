@@ -10,7 +10,7 @@ LarssiesAPI
 
 This is a general purpose API that has many features and many coming! :)
 
-*please note that I don't update the features in this README file, if you wanna view all the features of the api please head over to [LarssiesAPI - Features](https://api.larssies.com/features/)
+*please note that I don't update the features in this README file, if you wanna view all the features of the api please head over to [LarssiesAPI - Features](https://api.larssies.com/features/)*
 
 ### Example Usage
 
