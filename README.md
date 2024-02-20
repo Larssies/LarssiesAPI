@@ -71,7 +71,7 @@ npm install
 Basic usage
 
 ```
-npm run start
+node app.js
 ```
 
 # Statistics
