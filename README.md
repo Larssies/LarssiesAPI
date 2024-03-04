@@ -2,13 +2,15 @@ LarssiesAPI
 =========
 
 [![Issues](https://img.shields.io/github/issues/larssies/LarssiesAPI.svg)](https://github.com/Larssies/RandomPictureAPI/issues)
-[![License](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/Larssies/RandomPictureAPI/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Larssies/RandomPictureAPI/blob/main/LICENSE)
 [![Larssies](https://img.shields.io/badge/Author-Larssies-blue)](https://larssies.com/)
 
 
 ## Description:
 
 This is a general purpose API that has many features and many coming! :)
+
+*please note that I don't update the features in this README file, if you wanna view all the features of the api please head over to [LarssiesAPI - Features](https://api.larssies.com/features/)*
 
 ### Example Usage
 
@@ -71,7 +73,7 @@ npm install
 Basic usage
 
 ```
-npm run start
+node app.js
 ```
 
 # Statistics
