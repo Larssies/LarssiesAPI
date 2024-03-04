@@ -1,3 +1,4 @@
+require('dotenv').config();
 const https = require('https');
 const express = require('express');
 const fs = require('fs');
@@ -119,7 +120,7 @@ function handleMultipleRandomPictures(req, res, count) {
 }
 
 const getWeather = async (city) => {
-    const apiKey = "1b0546fd830dc389195babc9a9977b61"
+    const apiKey = process.env.API_KEY
     try {
       const response = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
       const weatherData = response.data;
